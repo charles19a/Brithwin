@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website Design - Easy Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>About Us</h1>
+    </section>
+
+
+    <!------- about us content -------->
+
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1>RR college of engginnering</h1>
+                <p>Rohini College of Engineering and Technology – Best Engineering College in bangalore an ISO-certified
+                    institution, accredited with A+ Grade by NAAC and has received NBA accreditation for its BE programs
+                    in Electrical & Electronics Engineering, Electronics & Communication Engineering and Mechanical
+                    Engineering. The institution was founded by renowned industrialist and philanthropist, Shri K. Neela
+                    Marthandan, RCET is committed to offering advanced engineering knowledge and shaping the future of
+                    engineering education and practice.</p>
+                <a href="https://www.youtube.com/c/EasyTutorialsVideo?sub_confirmation=1"
+                    class="hero-btn red-btn">EXPOLER NOW</a>
+            </div>
+            <div class="about-col">
+                <img src="images/about.jpg">
+            </div>
+        </div>
+    </section>
+
+    <!-------- footer ---------->
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>As the Best Engineering College in bangalore,Karnataka District</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>follow us <i class="fa fa-heart-o"></i> for more details</p>
+    </section>
+
+
+    <!----JavaScript for toggle menu---->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</body>
+
+</html>
