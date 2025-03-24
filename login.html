@@ -1,0 +1,116 @@
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>University Login Page</title>
+      <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+         .login-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+         }
+         .login-col {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            border-radius: 10px;
+         }
+         .input-group {
+            margin-bottom: 15px;
+         }
+         .input-group label {
+            display: block;
+            margin-bottom: 5px;
+         }
+         .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+         }
+         .hero-btn {
+            width: 100%;
+            padding: 10px;
+            background: #ff523b;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+         }
+         .error-message {
+            color: red;
+            text-align: center;
+         }
+      </style>
+   </head>
+   <body>
+      <section class="sub-header">
+         <nav>
+            <a href="index.html"><img src="images/logo.png" alt="University Logo"></a>
+            <div class="nav-links" id="navLinks">
+               <i class="fa fa-close" onclick="hideMenu()"></i>
+               <ul>
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="about.html">ABOUT</a></li>
+                  <li><a href="course.html">COURSE</a></li>
+                  <li><a href="blog.html">BLOG</a></li>
+                  <li><a href="contact.html">CONTACT</a></li>
+                  <li><a href="login.html">LOGIN</a></li>
+               </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+         </nav>
+         <h1>Admin and Student Login</h1>
+      </section>
+
+      <div class="login-form">
+         <div class="login-col">
+            <h1>Login to Your Account</h1>
+            <!-- Display error message if login fails -->
+            <?php if (isset($_GET['error']) && $_GET['error'] == 'invalid'): ?>
+                <div class="error-message">Invalid username or password.</div>
+            <?php endif; ?>
+            <form action="submit_login.php" method="post">
+               <div class="input-group">
+                  <label for="username">Username:</label>
+                  <input type="text" id="username" name="username" required placeholder="Enter your username">
+               </div>
+               <div class="input-group">
+                  <label for="password">Password:</label>
+                  <input type="password" id="password" name="password" required placeholder="Enter your password">
+               </div>
+               <button type="submit" class="hero-btn red-btn">Login</button>
+            </form>
+         </div>
+      </div>
+
+      <section class="footer">
+         <h4>About Us</h4>
+         <p>To reach out to a company or individual directly through provided channels like email, phone, or a contact form on their website, allowing customers to ask questions, provide feedback, or get assistance.</p>
+         <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+         </div>
+         <p>Follow us <i class="fa fa-heart-o"></i> for more details</p>
+      </section>
+
+      <script>
+         var navLinks = document.getElementById("navLinks");
+
+         function showMenu() {
+             navLinks.style.right = "0";
+         }
+
+         function hideMenu() {
+             navLinks.style.right = "-200px";
+         }
+      </script>
+   </body>
+</html>
